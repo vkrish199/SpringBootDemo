@@ -1,6 +1,8 @@
 package com.varun.app;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.varun.app.models.Alien;
+import com.varun.app.models.Laptop;
+import com.varun.app.services.LaptopService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,6 +11,23 @@ import org.springframework.context.ApplicationContext;
 public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
+//        new SpringBootDemoApplication().gettingStarted(args);
+        new SpringBootDemoApplication().differentLayers(args);
+    }
+
+    public void differentLayers(String[] args) {
+        ApplicationContext context =
+                SpringApplication.run(SpringBootDemoApplication.class, args);
+
+        LaptopService ls = context.getBean(LaptopService.class);
+
+        Laptop l = context.getBean(Laptop.class);
+
+        ls.addLaptop(l);
+
+    }
+
+    public void gettingStarted(String[] args) {
         ApplicationContext context =
                 SpringApplication.run(SpringBootDemoApplication.class, args);
 

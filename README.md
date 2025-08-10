@@ -13,3 +13,19 @@ and it's usage in SpringBootDemoApplication.java
 
 Autowiring - When one object is dependent on another object, spring can inject that
 object if @Autowired is specified on the reference of the Class.
+
+Spring boot simplifies the configuration compared to spring xml based
+configuration or java class based configuration
+
+We have multiple layers in Spring Boot
+
+Client <----> Server <----> Database
+
+Server - Controller Layer (handles requests and responses)
+         Service Layer (handles business logic/processing)
+         Repository Layer/ DAO (data access object) (handles database management)
+
+We can use @Component annotation to typically define an Entity
+We can use @Service annotation to define a Service class
+We can use @Repository annotation to define a Repository class
+ refer differentLayers method

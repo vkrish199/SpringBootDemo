@@ -1,4 +1,4 @@
-package com.varun.app;
+package com.varun.app.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
